@@ -1,0 +1,70 @@
+﻿@model WebApplication1.Models.StudyShare
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>StudyShare</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <!-- Center the form in the middle of the screen -->
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label font-weight-bold"></label>
+                <input asp-for="Title" class="form-control" placeholder="Enter the title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label font-weight-bold"></label>
+                <input asp-for="Type" class="form-control" placeholder="Enter the type" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label font-weight-bold"></label>
+                <input asp-for="Subject" class="form-control" placeholder="Enter the subject" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label font-weight-bold"></label>
+                <input asp-for="Description" class="form-control" placeholder="Enter description" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label font-weight-bold"></label>
+                <input asp-for="Url" class="form-control" placeholder="Enter the URL" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tags" class="control-label font-weight-bold"></label>
+                <input asp-for="Tags" class="form-control" placeholder="Enter tags (comma separated)" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilePath" class="control-label font-weight-bold"></label>
+                <input asp-for="FilePath" class="form-control" placeholder="Enter file path" />
+                <span asp-validation-for="FilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label font-weight-bold"></label>
+                <input asp-for="CreatedAt" class="form-control" type="datetime-local" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" value="Create" class="btn btn-primary mt-3" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
