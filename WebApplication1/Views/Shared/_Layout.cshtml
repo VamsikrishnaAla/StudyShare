@@ -10,8 +10,8 @@
     <style>
         /* Additional Styling for Navbar */
         .navbar {
-            background-color: #007bff; /* A bright blue color */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            background-color: #007bff; /* Bright blue background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         .navbar-brand, .nav-link {
@@ -25,15 +25,21 @@
             }
 
         .navbar-toggler-icon {
-            background-color: white; /* Change the hamburger menu icon color */
+            background-color: white; /* Hamburger menu icon color */
         }
 
         .navbar-collapse {
-            justify-content: flex-end; /* Align the links to the right on larger screens */
+            justify-content: flex-end; /* Align links to the right on larger screens */
         }
 
         .nav-item {
             margin-left: 20px;
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -42,7 +48,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <!-- Logo and Brand Name -->
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/images/logo.jpeg" alt="Logo" class="logo">
                     StudyShare
                 </a>
 
@@ -59,10 +66,10 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="findresource">Find Your Resource</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="findresource">Find Resources</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="StudyShares" asp-action="Index">Share Your Resource</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="StudyShares" asp-action="Index">Share Resources</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="charts">Charts</a>

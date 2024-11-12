@@ -7,85 +7,102 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
+<style>
+    /* Background image with semi-transparent overlay */
+    body {
+        position: relative;
+        background-image: url('images/background_home.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white overlay */
+            z-index: -1; /* Keep the overlay behind the content */
+        }
+
+    /* Match h3 background with navigation menu color */
+    .feature-heading {
+        background-color: #2563eb; /* Tailwind's default blue-600 */
+        color: white;
+        padding: 8px;
+        border-radius: 0.375rem;
+        text-align: center;
+    }
+</style>
 <body class="bg-gray-50">
     <!-- Hero Section -->
-    <header class="bg-white">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-2xl font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
-                    Students Shared Resource Library
-                </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Share and discover the best learning resources. Learn together, grow together.
-                </p>
-                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                    <div class="flex space-x-4 justify-center w-full">
-                        <div class="w-full sm:w-auto">
-                            <a href="/Home/FindResource" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-                                Find Resources
-                            </a>
-                        </div>
-                        <div class="w-full sm:w-auto">
-                            <a href="/StudyShares/index" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                                Share Resource
-                            </a>
-                        </div>
-                    </div>
+    <header class="bg-opacity-80">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-2xl font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
+                Students Shared Resource Library
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Share and discover the best learning resources. Learn together, grow together.
+            </p>
+            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                <div class="rounded-md shadow">
+                    <a href="/Home/FindResource" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                        Find Resources
+                    </a>
+                </div>
+                <div class="w-full sm:w-auto">
+                    <a href="/StudyShares/index" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                        Share Resource
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Features Grid -->
-    <div class="bg-gray-50 py-12">
+    <div class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mt-10">
                 <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                     <!-- Feature 1 -->
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="bg-white border border-gray-200 overflow-hidden shadow rounded-lg">
                         <div class="p-5">
-                            <div class="flex items-center">
-                                <div class="ml-5">
-                                    <h3 class="text-lg font-medium text-gray-900 text-center">Share Resources</h3>
-                                    <p class="mt-2 text-sm text-gray-500">
-                                        Empower the community by sharing valuable learning materials that have helped you. Whether it's articles, tutorials, study guides, or videos, your contributions make quality educational content accessible to others. Join us in building a supportive space where students can learn, grow, and succeed together.
-                                    </p>
-                                </div>
-                            </div>
+                            <h3 class="text-lg font-medium feature-heading">Share Resources</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Empower the community by sharing valuable learning materials that have helped you. Whether it's articles, tutorials, study guides, or videos, your contributions make quality educational content accessible to others. Join us in building a supportive space where students can learn, grow, and succeed together.
+                            </p>
                         </div>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="bg-white border border-gray-200 overflow-hidden shadow rounded-lg">
                         <div class="p-5">
-                            <div class="flex items-center">
-                                <div class="ml-5">
-                                    <h3 class="text-lg font-medium text-gray-900 text-center">Find Resources</h3>
-                                    <p class="mt-2 text-sm text-gray-500">
-                                        Explore a curated database of learning materials tailored to your needs. Search and filter through articles, tutorials, videos, and study guides to find valuable resources efficiently. Enhance your learning journey by accessing high-quality educational content all in one place.
-                                    </p>
-                                </div>
-                            </div>
+                            <h3 class="text-lg font-medium feature-heading">Find Resources</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Explore a curated database of learning materials tailored to your needs. Search and filter through articles, tutorials, videos, and study guides to find valuable resources efficiently. Enhance your learning journey by accessing high-quality educational content all in one place.
+                            </p>
                         </div>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="bg-white border border-gray-200 overflow-hidden shadow rounded-lg">
                         <div class="p-5">
-                            <div class="flex items-center">
-                                <div class="ml-5">
-                                    <h3 class="text-lg font-medium text-gray-900 text-center">Analytics</h3>
-                                    <p class="mt-2 text-sm text-gray-500">
-                                        Explore a curated database of learning materials tailored to your needs. Search and filter through articles, tutorials, videos, and study guides to find valuable resources efficiently. Enhance your learning journey by accessing high-quality educational content all in one place.
-                                    </p>
-                                </div>
-                            </div>
+                            <h3 class="text-lg font-medium feature-heading">Analytics</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Gain insights into usage patterns and identify popular resources through interactive charts. Visualize data trends to understand how learning materials are accessed and utilized by the community. Use these analytics to make informed decisions and improve your educational experience.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4">

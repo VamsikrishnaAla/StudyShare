@@ -15,4 +15,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\background_home.jpeg" />
+    <None Include="wwwroot\images\findmy.png" />
+    <None Include="wwwroot\images\logo.jpeg" />
+  </ItemGroup>
+
 </Project>
